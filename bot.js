@@ -580,10 +580,12 @@ function getMsg() {
 // Say the current track on Spooks Radio
 function getSong() {
     var songname = ajaxGet("http://spooksradio.tk/currentsong_bruno.php");
+    var songnamer = ajaxGet("http://rock.spooksradio.tk/currentsong_bruno.php");
+    var songnameh = ajaxGet("http://hardstyle.spooksradio.tk/currentsong_bruno.php")
     if (!songname) {
         songname = "nothing at the moment";
     }
-    send("#cyanSpooks Radio is currently playing " + songname + ".");
+    send("#cyanSpooks Radio is currently playing " + songname + "." + "playing on the rock stream" +songnamer + "." + "playing on the hardstyle stream" + songnameh);
 }
 
 // I'd just like to interject for a moment...
